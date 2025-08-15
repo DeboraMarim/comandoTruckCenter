@@ -722,8 +722,9 @@ nav ul li a.active::after {
 /* Footer */
 footer {
     background-color: #000000;
-    color: var(--white);
-    padding: 60px 0 20px;
+    color: #fff;
+    padding: 60px 0 0;
+    position: relative;
 }
 
 .footer-content {
@@ -777,6 +778,7 @@ footer {
     align-items: center;
     margin-bottom: 15px;
     color: #d1d1d1;
+    font-size: 0.95rem;
 }
 
 .footer-contact i {
@@ -784,6 +786,59 @@ footer {
     color: var(--accent-color);
     width: 20px;
     text-align: center;
+}
+
+/* Social Icons in Footer */
+.footer-contact .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-contact .social-icon {
+    color: #fff;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-contact .social-icon:hover {
+    background: var(--accent-color);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-links h4::after,
+    .footer-contact h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .footer-contact .social-icons {
+        justify-content: center;
+    }
 }
 
 .footer-bottom {
