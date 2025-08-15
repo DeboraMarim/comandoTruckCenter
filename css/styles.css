@@ -91,8 +91,8 @@ p {
 
 /* Header */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: fixed;
     width: 100%;
     top: 0;
@@ -101,8 +101,8 @@ header {
 }
 
 header.scrolled {
-    background-color: var(--white);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 header .container {
@@ -126,7 +126,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--dark-color);
+    color: var(--white);
     font-weight: 500;
     font-size: 1rem;
     position: relative;
@@ -153,12 +153,12 @@ nav ul li a.active::after {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--dark-color);
+    color: var(--white);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 51, 102, 0.9)), url('../imagens/comandotruck.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.562), rgb(0, 0, 0)), url('../imagens/hero.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -396,7 +396,7 @@ nav ul li a.active::after {
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
+    background-color: #000000;
     color: var(--white);
     padding: 60px 0 20px;
 }
