@@ -276,6 +276,52 @@ nav ul li a.active::after {
     color: #e0e0e0;
 }
 
+/* Visit Button */
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visit-btn i {
+    transition: transform 0.3s ease;
+}
+
+.visit-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color) !important;
+    transform: translateY(-3px);
+    /* box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3); */
+}
+
+.visit-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .visit-btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto 0;
+    }
+}
+
 .highlight-text {
     color: var(--primary-color) !important;
     font-weight: 600;
@@ -315,6 +361,7 @@ nav ul li a.active::after {
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .feature-item:hover {
     transform: translateY(-5px);
