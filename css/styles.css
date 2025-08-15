@@ -353,15 +353,17 @@ nav ul li a.active::after {
 
 .feature-item {
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+    padding: 30px 20px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    text-align: center;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .feature-item:hover {
     transform: translateY(-5px);
@@ -370,10 +372,24 @@ nav ul li a.active::after {
 }
 
 .feature-item i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    min-width: 40px;
+    min-width: 50px;
     text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Specific style for the truck icon */
+.fa-truck-pickup {
+    display: inline-block !important;
+    font-size: 2.8rem !important;
+    color: var(--primary-color) !important;
+}
+
+/* Hover effect for all feature items */
+.feature-item:hover i {
+    transform: scale(1.1);
 }
 
 .feature-item span {
