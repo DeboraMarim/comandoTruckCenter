@@ -1,43 +1,76 @@
 /* Gallery Section */
 .gallery-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
 }
 
 .gallery-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
+    position: relative;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     aspect-ratio: 1;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards;
 }
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.3s; }
+.gallery-item:nth-child(5) { animation-delay: 0.4s; }
+.gallery-item:nth-child(6) { animation-delay: 0.5s; }
+
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(255, 193, 7, 0.2);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.3);
+    z-index: 2;
 }
 
 .gallery-item img {
@@ -45,11 +78,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .gallery-overlay {
@@ -58,21 +91,47 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
 }
 
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
+    transform: translateY(0);
 }
 
-.gallery-overlay i {
+.gallery-overlay h3 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-overlay h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-overlay p {
+    color: #ddd;
+    margin: 0;
+    font-size: 0.9rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-overlay p {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Lightbox */
@@ -83,12 +142,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .lightbox.active {
@@ -99,6 +160,7 @@
 .lightbox-content {
     position: relative;
     max-width: 90%;
+    max-height: 90vh;
     max-height: 90%;
 }
 
