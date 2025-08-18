@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
@@ -104,7 +105,7 @@
                             <span>Recapagem VIPAL</span>
                         </div>
                         <div class="feature-item">
-                            <i class="fas fa-car-side" style="font-size: 2.5rem;"></i>
+                            <i class="far fa-circle" style="font-size: 2.5rem;"></i>
                             <span>Pneus Novos e Recapados</span>
                         </div>
                         <div class="feature-item">
@@ -164,6 +165,97 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Galeria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck01.png" alt="Galeria 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck02.png" alt="Galeria 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck03.png" alt="Galeria 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck04.png" alt="Galeria 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck06.png" alt="Galeria 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck07.png" alt="Galeria 7" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck08.png" alt="Galeria 8" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck09.png" alt="Galeria 9" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck10.png" alt="Galeria 10" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck11.png" alt="Galeria 11" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck12.png" alt="Galeria 12" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck13.png" alt="Galeria 13" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn">&times;</span>
+            <span class="nav-btn prev-btn">&lsaquo;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <span class="nav-btn next-btn">&rsaquo;</span>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -202,5 +294,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
