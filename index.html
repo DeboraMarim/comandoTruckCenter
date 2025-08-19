@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="css/lightbox.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
@@ -25,64 +27,102 @@
     </a>
 
     <!-- Header -->
-    <header>
+    <header class="main-header">
         <div class="container">
-            <div class="logo">
-                <img src="imagens/logo.png" alt="Comando Truck">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+            <div class="header-content">
+                <div class="logo">
+                    <img src="imagens/logo.png" alt="Comando Truck Center" class="logo-img">
                 </div>
-            </nav>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+                        <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="#blog" class="nav-link">Portal Pneumático</a></li>
+                        <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="https://wa.me/555599706290" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
+    <section class="hero" id="home">
         <div class="container">
-            <h1>Comando Truck</h1>
-            <p>Sua solução completa em pneus e manutenção de veículos pesados</p>
-            <a href="https://wa.me/555599706290" class="btn" target="_blank">Fale Conosco</a>
-        </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-truck-monster"></i>
-                    <h3>Venda de Pneus</h3>
-                    <p>Pneus novos e recapados para todos os tipos de veículos pesados.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Manutenção</h3>
-                    <p>Manutenção especializada em veículos pesados e caminhões.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-roller"></i>
-                    <h3>Pintura</h3>
-                    <p>Serviço profissional de pintura automotiva.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-wrench"></i>
-                    <h3>Borracharia</h3>
-                    <p>Serviços completos de borracharia 24 horas.</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Pneus para transporte pesado com segurança e eficiência</h1>
+                <p class="hero-subtitle">Soluções confiáveis em pneus e manutenção de veículos pesados</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">Solicitar Orçamento</a>
+                    <a href="tel:+555599706290" class="btn btn-outline">
+                        <i class="fas fa-phone-alt"></i> Ligar Agora
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="hero-overlay"></div>
     </section>
 
-
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas para sua frota de veículos pesados</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3 class="service-title">Venda de Pneus</h3>
+                    <p class="service-description">Novos e recapados para veículos pesados, com as melhores marcas do mercado.</p>
+                    <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Manutenção Pesada</h3>
+                    <p class="service-description">Alinhamento, balanceamento e revisões técnicas especializadas.</p>
+                    <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="service-title">Pintura Profissional</h3>
+                    <p class="service-description">Pintura automotiva especializada para frotas e veículos pesados.</p>
+                    <a href="#contact" class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3 class="service-title">Borracharia 24h</h3>
+                    <p class="service-description">Atendimento de emergência, pronto e mecanizado 24 horas.</p>
+                    <a href="tel:+555599706290" class="service-link">Ligar agora <i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <p>Precisa de um serviço personalizado?</p>
+                <a href="#contact" class="btn btn-primary">Fale com nossos especialistas</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Sobre -->
     <section id="sobre" class="about">
@@ -131,201 +171,201 @@
         </div>
     </section>
 
-        <!-- Blog Sobre Pneus -->
-        <section id="blog" class="blog-section">
-            <div class="container">
-                <div class="about-mission">
-                    <h2>Portal Pneumático</h2>
-                    <p class="highlight">Tudo o que você precisa saber para manter seus pneus em perfeito estado</p>
-                </div>
-                
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu1.png" alt="Borracha natural de pneu" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>A Cor Original da Borracha</h3>
-                            <p>Você sabia que a borracha natural é originalmente branca? A cor preta dos pneus vem do negro de fumo, adicionado para aumentar a durabilidade e resistência à abrasão.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu2.png" alt="Marcações de pneu" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Entendendo as Marcações</h3>
-                            <p>Aprenda a ler as marcações dos pneus: largura, perfil, construção, diâmetro do aro, índice de carga e código de velocidade. Esses números e letras têm significados importantes para a segurança.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu3.png" alt="Vida útil do pneu" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Vida Útil dos Pneus</h3>
-                            <p>Em média, um pneu tem vida útil de 5 anos a partir da data de fabricação, mesmo com pouca quilometragem. Após esse período, a borracha começa a se deteriorar, comprometendo a segurança.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu4.png" alt="Segurança dos pneus" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Segurança em Primeiro Lugar</h3>
-                            <p>Pneus em mau estado são responsáveis por inúmeros acidentes. A profundidade mínima do sulco é de 1,6mm, mas recomenda-se trocar quando chegar a 3mm para manter a segurança na pista molhada.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu5.png" alt="Economia de combustível" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Economia de Combustível</h3>
-                            <p>Pneus descalibrados ou com pressão incorreta podem aumentar o consumo de combustível em até 5%. Mantenha a calibragem semanalmente para economizar e preservar o meio ambiente.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="imagens/pneus/pneu6.png" alt="Manutenção de pneus" loading="lazy">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Manutenção Preventiva</h3>
-                            <p>Alinhamento, balanceamento e rodízio de pneus são essenciais para prolongar sua vida útil. Realize essas manutenções a cada 10.000 km ou conforme recomendação do fabricante.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    <!-- Gallery Section -->
-    <section id="galeria" class="gallery-section">
+        <!-- Blog Section -->
+    <section id="blog" class="blog-section">
         <div class="container">
-            <div class="about-mission">
-                <h2>Nosso Dia a Dia em Imagens</h2>
+            <div class="section-header">
+                <h2 class="section-title">Portal Pneumático</h2>
+                <p class="section-subtitle">Informações técnicas e dicas para manutenção correta dos pneus</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck01.png" alt="Galeria 1" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+            
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu1.png" alt="Borracha natural de pneu" loading="lazy">
+                        <div class="blog-category">Tecnologia</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck02.png" alt="Galeria 2" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 18/08/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 2 min</span>
+                        </div>
+                        <h3 class="blog-title">A cor dos pneus</h3>
+                        <p class="blog-excerpt">A cor preta dos pneus vem do negro de fumo, adicionado à borracha natural para aumentar a durabilidade e resistência à abrasão.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck03.png" alt="Galeria 3" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                </article>
+                
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu2.png" alt="Marcações de pneus" loading="lazy">
+                        <div class="blog-category">Técnico</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck04.png" alt="Galeria 4" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 15/08/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 3 min</span>
+                        </div>
+                        <h3 class="blog-title">Como ler a marcação do pneu</h3>
+                        <p class="blog-excerpt">Entenda o significado dos códigos na lateral do pneu: diâmetro, largura, perfil, índice de carga e código de velocidade.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck06.png" alt="Galeria 5" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                </article>
+                
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu3.png" alt="Vida útil do pneu" loading="lazy">
+                        <div class="blog-category">Manutenção</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck07.png" alt="Galeria 7" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 10/08/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 2 min</span>
+                        </div>
+                        <h3 class="blog-title">Vida útil do pneu</h3>
+                        <p class="blog-excerpt">Recomendação técnica: substitua os pneus quando atingirem 3mm de profundidade do sulco ou após 5 anos da data de fabricação.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck08.png" alt="Galeria 8" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                </article>
+                
+                <!-- Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu5.png" alt="Economia de combustível" loading="lazy">
+                        <div class="blog-category">Economia</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck09.png" alt="Galeria 9" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 05/08/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 2 min</span>
+                        </div>
+                        <h3 class="blog-title">Calibragem e economia</h3>
+                        <p class="blog-excerpt">Pneus mal calibrados podem aumentar o consumo de combustível em até 5%. Calibre a cada 15 dias para melhor desempenho.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck10.png" alt="Galeria 10" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                </article>
+                
+                <!-- Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu4.png" alt="Segurança dos pneus" loading="lazy">
+                        <div class="blog-category">Segurança</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck11.png" alt="Galeria 11" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 01/08/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 3 min</span>
+                        </div>
+                        <h3 class="blog-title">Segurança veicular</h3>
+                        <p class="blog-excerpt">Pneus em mau estado são responsáveis por 38% dos acidentes em rodovias. Conheça os sinais de desgaste e quando substituí-los.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck12.png" alt="Galeria 12" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                </article>
+                
+                <!-- Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="imagens/pneus/pneu6.png" alt="Armazenamento de pneus" loading="lazy">
+                        <div class="blog-category">Dicas</div>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagens/galeria/photoComandoTruck13.png" alt="Galeria 13" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 25/07/2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock"></i> 2 min</span>
+                        </div>
+                        <h3 class="blog-title">Armazenamento correto</h3>
+                        <p class="blog-excerpt">Aprenda as melhores práticas para armazenar pneus e garantir sua durabilidade e segurança na próxima utilização.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
-
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox">
-            <span class="close-btn">&times;</span>
-            <span class="nav-btn prev-btn">&lsaquo;</span>
-            <div class="lightbox-content">
-                <img id="lightbox-img" src="" alt="">
-            </div>
-            <span class="nav-btn next-btn">&rsaquo;</span>
+            
+            <div class="blog-cta">
+                </div>
         </div>
     </section>
-
-    <!-- Destaques -->
-    <section class="highlights">
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
         <div class="container">
-            <div class="about-mission">
-                <h2>Venha nos fazer uma visita!</h2>
+            <div class="section-header">
+                <h2 class="section-title">Nossa Estrutura</h2>
             </div>
-            <div class="about-content">
-                
-                <div class="about-features">
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-user-shield"></i>
-                            <span><strong>Profissionais Certificados</strong><br>Nossa equipe passa por treinamentos constantes para entregar excelência em cada serviço</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-medal"></i>
-                            <span><strong>Qualidade Comprovada</strong><br>Trabalhamos apenas com as melhores marcas e fornecedores do mercado</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-handshake"></i>
-                            <span><strong>Compromisso com Você</strong><br>Garantia de serviço e transparência em todos os nossos atendimentos</span>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck01.png" alt="Oficina de pneus equipada" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Oficina Completa</h3>
+                            <p>Estrutura preparada para atender todos os tipos de veículos pesados</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="about-video">
-                    <video autoplay loop muted playsinline>
-                        <source src="imagens/sobre.mp4" type="video/mp4">
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck02.png" alt="Equipe técnica especializada" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Equipe Qualificada</h3>
+                            <p>Profissionais certificados e com ampla experiência em veículos pesados</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck03.png" alt="Serviço de pintura" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Pintura Profissional</h3>
+                            <p>Técnicas avançadas para um acabamento perfeito e durável</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck04.png" alt="Atendimento 24 horas" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Atendimento 24h</h3>
+                            <p>Pronto atendimento para emergências na estrada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck06.png" alt="Equipamentos de última geração" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Tecnologia Avançada</h3>
+                            <p>Equipamentos modernos para diagnósticos precisos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="imagens/galeria/photoComandoTruck07.png" alt="Atendimento ao cliente" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h3>Atendimento Personalizado</h3>
+                            <p>Soluções sob medida para cada necessidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-cta">
+                <p>Quer conhecer nossa estrutura de perto?</p>
+                <a href="#contact" class="btn btn-primary">Agende uma visita</a>
             </div>
         </div>
     </section>
